@@ -42,6 +42,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-W1-8lb">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.2338586151599884" green="0.28935420513153076" blue="0.35016870498657227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,8 +56,10 @@
                             <constraint firstItem="OY6-nF-st5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cnl-Dy-czM"/>
                             <constraint firstItem="IOu-DI-Uoa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EgE-UQ-LXw"/>
                             <constraint firstItem="IOu-DI-Uoa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hlp-71-DUj"/>
+                            <constraint firstItem="rEc-W1-8lb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QfW-X5-sUo"/>
                             <constraint firstItem="hdQ-la-3fR" firstAttribute="top" secondItem="IOu-DI-Uoa" secondAttribute="bottom" id="VdY-4J-jDA"/>
                             <constraint firstItem="hdQ-la-3fR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vni-W7-JZU"/>
+                            <constraint firstItem="rEc-W1-8lb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZSg-Rj-FaT"/>
                             <constraint firstItem="IOu-DI-Uoa" firstAttribute="top" secondItem="OY6-nF-st5" secondAttribute="bottom" id="uOn-eS-NbL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
