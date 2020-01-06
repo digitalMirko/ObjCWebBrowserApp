@@ -7,8 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @interface ViewController : UIViewController
+
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicator;
+
+
+
+// toolbar buttons
+- (IBAction)stopBtn:(id)sender;
+- (IBAction)refreshBtn:(id)sender;
+- (IBAction)backBtn:(id)sender;
+- (IBAction)forwardBtn:(id)sender;
+
+
+
+
+
 
 
 @end

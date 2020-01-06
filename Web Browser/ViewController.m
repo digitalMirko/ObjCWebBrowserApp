@@ -20,4 +20,15 @@
 }
 
 
+- (IBAction)stopBtn:(id)sender {
+}
+
+- (IBAction)refreshBtn:(id)sender {
+}
+
+- (IBAction)backBtn:(id)sender {
+}
+
+- (IBAction)forwardBtn:(id)sender {
+}
 @end
