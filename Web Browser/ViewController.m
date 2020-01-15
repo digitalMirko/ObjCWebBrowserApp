@@ -18,6 +18,23 @@
     [super viewDidLoad];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com"]]];
+
+    [self.webView addSubview:self.actIndicator];
+    [self.actIndicator stopAnimating];
+    
+    // web view delegate
+    self.webView.navigationDelegate = self;
+    
+}
+
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    
+    [self.actIndicator startAnimating];
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    
+    [self.actIndicator stopAnimating];
     
 }
 
