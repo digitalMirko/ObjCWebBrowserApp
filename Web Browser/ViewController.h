@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface ViewController : UIViewController<WKNavigationDelegate>
+@interface ViewController : UIViewController<WKNavigationDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 

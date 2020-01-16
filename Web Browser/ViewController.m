@@ -17,12 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // removes magnifying glass graphic in the search bar element
+    [UITextField appearanceWhenContainedIn:[UISearchBar class], nil].leftView = nil;
+    [UISearchBar appearance].searchTextPositionAdjustment = UIOffsetMake(10, 0);
+    
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com"]]];
 
     [self.webView addSubview:self.actIndicator];
     [self.actIndicator stopAnimating];
     
-    // web view delegate
+    // webView delegate
     self.webView.navigationDelegate = self;
     
 }
@@ -62,4 +66,17 @@
         [self.webView goForward];
     }
 }
+
+// Search bar search button clicked
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@", self.searchBar.text]]]];
+    
+    // dismiss keyboard
+    [searchBar resignFirstResponder];
+
+}
+
+
+
 @end
