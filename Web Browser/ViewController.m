@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     // removes magnifying glass graphic in the search bar element
+    // depreciated line below in iOS 9
     [UITextField appearanceWhenContainedIn:[UISearchBar class], nil].leftView = nil;
     [UISearchBar appearance].searchTextPositionAdjustment = UIOffsetMake(10, 0);
     
